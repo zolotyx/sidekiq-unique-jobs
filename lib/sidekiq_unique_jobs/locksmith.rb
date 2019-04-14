@@ -81,7 +81,7 @@ module SidekiqUniqueJobs
     # @param [String] token the token to unlock (defaults to jid)
     #
     # @return [false] unless locked?
-    # @return [String] Sidekiq job_id (jid) if successful
+    # @return [String] the Sidekiq job_id (jid) when successful
     #
     def unlock!(token = nil)
       token ||= jid
@@ -95,15 +95,11 @@ module SidekiqUniqueJobs
     end
 
     #
-    # @param [String] token the unique token to check for a lock.
-    #   nil will default to the jid provided in the initializer
-    # @return [true, false]
-    #
     # Checks if this instance is considered locked
     #
-    # @param [<type>] token <description>
+    # @param [String] token the value to check
     #
-    # @return [<type>] <description>
+    # @return [true,false,nil]
     #
     def locked?(token = nil)
       token ||= jid
