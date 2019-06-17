@@ -6,6 +6,7 @@
 # @author Mikael Henriksson <mikael@zoolutions.se>
 #
 module SidekiqUniqueJobs
+  APARTMENT             ||= "apartment"
   ARGS                  ||= "args"
   AT                    ||= "at"
   CHANGELOGS            ||= "uniquejobs:changelog"
